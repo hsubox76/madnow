@@ -25,7 +25,89 @@
   margin: 0 10px;
 }
 
-.navbar a {
+.navbar a, .logout-button {
   color: #fff;
   text-decoration: none;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.content-container {
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #8BBDB2;
+  color: #fff;
+  height: calc(100vh - 50px);
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  box-sizing: border-box;
+  width: 300px;
+  flex-direction: column;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
+  padding: 4px;
+  margin: 5px 0;
+}
+
+.login-page .button {
+  box-sizing: border-box;
+  border: none;
+  background-color: #2D3E4F;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-page .button:hover {
+  background-color: #375a7d;
+}
+
+.login-form-title {
+  font-size: 24px;
+  margin: 10px 0 0 0;
+}
+
+.login-form-switch-link {
+  cursor: pointer;
+  color: #2D3E4F;
+  margin: 5px 0 10px 0;
+}
+
+.login-form-switch-link .status-description {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.login-form-switch-link:hover {
+  color: #fff;
+}
+
+.login-error {
+  margin-top: 10px;
+  background-color: #F16163;
+  padding: 8px;
 }
