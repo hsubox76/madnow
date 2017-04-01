@@ -1,0 +1,52 @@
+@import './colors.css';
+
+.state-dropdown {
+  width: 280px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-2-light);
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+.options-container {
+  width: 280px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+}
+
+.state-box {
+  box-sizing: border-box;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.selected-state-box {
+  background-color: var(--color-1-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.state-option-box {
+  background-color: rgba(200, 200, 200, 0.7);
+  color: #2D3E4F;
+}
+
+.state-option-box:hover {
+  background-color:  var(--color-1-dark);
+  color: #fff;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-top: 8px solid #fff;
+}

@@ -1,0 +1,66 @@
+@import './colors.css';
+
+.profile-page {
+  width: 100%;
+  height: 100%;
+}
+
+.top-section {
+  background-color: var(--neutral-light);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--color-1-dark);
+  font-weight: 400;
+}
+
+.top-section-icons {
+  display: flex;
+  font-size: 60px;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.top-section-header {
+  font-size: 36px;
+  margin-left: 20px;
+}
+
+.tiles-container {
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  background-color: var(--color-2-light);
+}
+
+.section {
+  flex: 1;
+  padding: 10px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 5px 10px 5px 10px;
+  color: var(--white-text);
+}
+
+.info-section {
+  background-color: var(--color-1-dark);
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5px;
+  padding: 10px 5px;
+  align-items: center;
+  /*background-color: var(--color-1-light);*/
+  color: var(--white-text);
+}
+
+.info-label {
+  margin-right: 10px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
 import { Redirect } from 'react-router-dom';
+import '../css/Login.css';
 
 class Login extends React.Component {
   state = {
@@ -42,7 +43,7 @@ class Login extends React.Component {
     }
     
     return (
-      <div className="login-page">
+      <div className="login-container">
         <div className="login-form-title">
           {this.state.formType === 'login' ? 'Log In' : 'Create Account'}
         </div>

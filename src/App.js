@@ -9,7 +9,7 @@ import {
 import firebase from 'firebase';
 import Login from './components/Login';
 import MyStuff from './components/MyStuff';
-import './App.css';
+import './css/App.css';
 
 const AuthButton = withRouter((props) => (
   props.user.uid ? (
