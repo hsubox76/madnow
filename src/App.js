@@ -78,19 +78,20 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="navbar">
+          <nav className="navbar">
             <ul>
               <li><Link to="/main">Main</Link></li>
               <li><Link to="/mystuff">My Stuff</Link></li>
             </ul>
             <AuthButton user={this.state.user} />
-          </div>
+          </nav>
           <div className="content-container">
             <Route path="/" exact={true} component={Main}/>
             <Route path="/main" component={Main}/>
             <Route path="/login" render={(props) => <Login {...props} user={this.state.user} />}/>
             <PrivateRoute path="/mystuff" user={this.state.user} component={MyStuff}/>
           </div>
+          <footer className="global-footer">footer</footer>
         </div>
       </Router>
     );

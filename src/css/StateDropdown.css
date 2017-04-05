@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   height: 35px;
+  color: var(--white-text);
 }
 
 .options-container {
@@ -26,7 +27,7 @@
 }
 
 .selected-state-box {
-  background-color: var(--color-1-dark);
+  background-color: var(--section-color-3);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,8 +35,7 @@
 }
 
 .state-option-box {
-  background-color: rgba(200, 200, 200, 0.7);
-  color: #2D3E4F;
+  background-color: var(--palette-5-transparent);
 }
 
 .state-option-box:hover {

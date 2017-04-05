@@ -24,16 +24,30 @@ class Login extends React.Component {
     const email = this._emailAddress.value;
     const password = this._password.value;
     if (this.state.formType === 'login') {
-      firebase.auth().signInWithEmailAndPassword(email, password).catch((error) => {
-        this.setState({ error })
-      });
+      firebase.auth()
+        .signInWithEmailAndPassword(email, password)
+        .catch((error) => {
+          this.setState({ error })
+        });
     } else {
-      firebase.auth().createUserWithEmailAndPassword(email, password);
+      firebase.auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(user => {
+          return firebase.database().ref('users/' + user.uid)
+            .set({ preferredEmail: email, state: '' })
+            .then(() => user);
+        })
+        .then(user => {
+          return user.sendEmailVerification();
+        })
+        .catch((error) => {
+          this.setState({ error })
+        });
     }
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } }
+    const { from } = this.props.location.state || { from: { pathname: '/mystuff' } }
     const { redirectToReferrer } = this.state
     
     if (redirectToReferrer) {

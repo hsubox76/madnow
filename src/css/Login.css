@@ -32,7 +32,7 @@
 .login-container .button {
   box-sizing: border-box;
   border: none;
-  background-color: var(--color-1-dark);
+  background-color: var(--section-color-3);
   padding: 10px;
   color: #fff;
   font-size: 14px;
@@ -41,7 +41,7 @@
 }
 
 .login-container .button:hover {
-  background-color: var(--color-1-light);
+  background-color: var(--section-color-2);
 }
 
 .login-form-title {

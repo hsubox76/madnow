@@ -6,14 +6,14 @@
 }
 
 .top-section {
-  background-color: var(--neutral-light);
+  background-color: var(--banner-color);
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: var(--color-1-dark);
-  font-weight: 400;
+  color: var(--dark-text);
+  font-weight: var(--weight-bold);
 }
 
 .top-section-icons {
@@ -33,7 +33,7 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
-  background-color: var(--color-2-light);
+  flex-direction: column;
 }
 
 .section {
@@ -44,11 +44,12 @@
 .section-title {
   font-size: 24px;
   margin: 5px 10px 5px 10px;
-  color: var(--white-text);
+  font-weight: var(--weight-bold);
 }
 
 .info-section {
-  background-color: var(--color-1-dark);
+  background-color: var(--section-color-1);
+  color: var(--dark-text);
 }
 
 .info-row {
@@ -56,11 +57,41 @@
   flex-direction: row;
   margin: 0 5px;
   padding: 10px 5px;
-  align-items: center;
-  /*background-color: var(--color-1-light);*/
-  color: var(--white-text);
+  align-items: flex-start;
 }
 
 .info-label {
   margin-right: 10px;
+  padding-top: 5px;
+}
+
+.email-section {
+  background-color: var(--section-color-2);
+  color: var(--dark-text);
+}
+
+.info-section .fa.fa-warning {
+  color: var(--banner-color);
+}
+
+.user-email {
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+}
+
+.email-warning-line {
+  font-weight: var(--weight-bold);
+  color: var(--banner-color);
+  margin-top: 5px;
+}
+
+.verify-link {
+  color: var(--link-color);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.verify-link:hover {
+  text-decoration: underline;
 }

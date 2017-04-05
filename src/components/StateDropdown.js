@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import states from '../data/stateList';
 import '../css/StateDropdown.css';
 
-const BOTTOM_MARGIN = 20;
+const BOTTOM_MARGIN = 70;
 const DEFAULT_HEIGHT = 50;
 
 class StateDropdown extends Component {
@@ -25,6 +25,10 @@ class StateDropdown extends Component {
       this.setState({ dropdownOpen: false });
     };
   }
+  handleOptionClick(stateName) {
+    this.props.onStateSelect(stateName);
+    this.setState({ dropdownOpen: false });
+  }
   render() {
     return (
       <div
@@ -44,7 +48,11 @@ class StateDropdown extends Component {
             style={{ height: window.innerHeight - this._bottom - BOTTOM_MARGIN || DEFAULT_HEIGHT }}
           >
             {states.map(state => (
-              <div className="state-box state-option-box" key={state.abbreviation}>
+              <div
+                className="state-box state-option-box"
+                key={state.abbreviation}
+                onClick={() => this.handleOptionClick(state.name)}
+              >
                 {state.name}
               </div>
             ))}
@@ -53,6 +61,11 @@ class StateDropdown extends Component {
       </div>
     );
   }
-} 
+}
+
+StateDropdown.propTypes = {
+  selectedState: PropTypes.string,
+  onStateSelect: PropTypes.func
+};
 
 export default StateDropdown;
