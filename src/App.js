@@ -9,6 +9,7 @@ import {
 import firebase from 'firebase';
 import Login from './components/Login';
 import MyStuff from './components/MyStuff';
+import EmailEditPage from './components/EmailEditPage';
 import './css/App.css';
 
 const AuthButton = withRouter((props) => (
@@ -31,7 +32,6 @@ const Main = () => (
 );
 
 const PrivateRoute = ({ component, user, ...rest }) => {
-  console.log('private route user', user, user && user.uid);
   if (user === 'loading') {
     return <div className="loading">loading...</div>;
   }
@@ -90,6 +90,7 @@ class App extends Component {
             <Route path="/main" component={Main}/>
             <Route path="/login" render={(props) => <Login {...props} user={this.state.user} />}/>
             <PrivateRoute path="/mystuff" user={this.state.user} component={MyStuff}/>
+            <PrivateRoute path="/edit" user={this.state.user} component={EmailEditPage}/>
           </div>
           <footer className="global-footer">footer</footer>
         </div>

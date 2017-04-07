@@ -1,0 +1,59 @@
+.info-section {
+  background-color: var(--section-color-1);
+  color: var(--white-text);
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  align-items: flex-start;
+}
+
+.info-label {
+  margin-right: 10px;
+  padding-top: 5px;
+}
+
+.email-line {
+  display: flex;
+  align-items: center;
+  --success-color: #6af7f7;
+}
+
+.email-line .fa {
+  margin-right: 5px;
+}
+
+.email-line .email-not-verified {
+  color: var(--warning-color);
+}
+
+.email-line .email-verified {
+  color: var(--success-color);
+}
+
+.email-line .user-email {
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+}
+
+.email-warning-line {
+  font-weight: var(--weight-bold);
+  color: var(--warning-color);
+  margin-top: 5px;
+}
+
+.verify-link {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.verify-link.try-again {
+  margin-left: 10px;
+}
+
+.verify-link:hover {
+  text-decoration: underline;
+}

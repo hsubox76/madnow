@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import firebase from 'firebase';
 import _ from 'lodash';
 import StateDropdown from './StateDropdown';
-import '../css/MyStuff.css';
+import '../css/UserInfo.css';
 
-class MyStuff extends Component {
+class UserInfo extends Component {
   constructor() {
     super();
     this.state = {
@@ -35,12 +35,19 @@ class MyStuff extends Component {
             <div className="email-line">
             <span className="user-email">{user.email}</span>
               {user.emailVerified
-                ? <span className="fa fa-check-circle" />
-                : <span className="fa fa-warning" />}
+                ? (
+                  <div className="email-verified">
+                    <span className="fa fa-check-circle" />
+                      <span>verified!</span>
+                  </div>)
+                : (
+                  <div className="email-not-verified">
+                    <span className="fa fa-warning" />
+                    <span>email not verified!</span>
+                  </div>)}
             </div>
               {!user.emailVerified && !this.state.emailSent && !this.state.emailStarted && (
                 <div className="email-warning-line">
-                  <span>email not verified!</span>
                   <span
                     className="verify-link"
                     onClick={() => this.handleVerificationClick()}
@@ -58,10 +65,10 @@ class MyStuff extends Component {
                 <div className="email-warning-line">
                   <span>new verification email sent!</span>
                   <span
-                    className="verify-link"
+                    className="verify-link try-again"
                     onClick={() => this.handleVerificationClick()}
                   >
-                    try again?
+                    send again?
                   </span>
                 </div>
               )}
@@ -81,4 +88,8 @@ class MyStuff extends Component {
   }
 }
 
-export default MyStuff;
+UserInfo.propTypes = {
+  userData: PropTypes.object
+}
+
+export default UserInfo;

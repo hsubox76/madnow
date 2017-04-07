@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import _ from 'lodash';
 import UserInfo from './UserInfo';
+import Emails from './Emails';
 import '../css/MyStuff.css';
 
 class MyStuff extends Component {
@@ -13,11 +14,20 @@ class MyStuff extends Component {
       emailSent: false
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     const user = firebase.auth().currentUser;
-    firebase.database().ref('users/' + user.uid).on('value', snapshot => {
-      this.setState({ userData: snapshot.val() });
-    });
+    firebase.database().ref('users/' + user.uid)
+      .on('value', snapshot => {
+        this.setState({
+          userId: user.uid,
+          userData: snapshot.val()
+        });
+      });
+  }
+  componentWillUnmount() {
+    if (this.state.userId) {
+      firebase.database().ref('users/' + this.state.userId).off();
+    }
   }
   handleStateSelect(selectedState) {
     const user = firebase.auth().currentUser;
@@ -51,9 +61,9 @@ class MyStuff extends Component {
         <UserInfo
           userData={this.state.userData}
         />
-        <div className="section email-section">
-          <div className="section-title">Your Scheduled Emails</div>
-        </div>
+        <Emails
+          userData={this.state.userData}
+        />
       </div>
       </div>
     );

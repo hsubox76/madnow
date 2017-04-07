@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import states from '../data/stateList';
 import '../css/StateDropdown.css';
 
-const BOTTOM_MARGIN = 70;
+const BOTTOM_MARGIN = 30;
 const DEFAULT_HEIGHT = 50;
 
 class StateDropdown extends Component {

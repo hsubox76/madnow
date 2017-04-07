@@ -1,0 +1,82 @@
+.email-section {
+  flex: 1 0 200px;
+  background-color: var(--section-color-2);
+  color: var(--white-text);
+  align-items: flex-start;
+}
+
+.no-emails-message {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.emails-table {
+  margin-top: 15px;
+  display: table;
+  width: 600px;
+  border-spacing: 0 3px;
+}
+
+.emails-table td {
+  padding: 5px;
+}
+
+.emails-table tbody tr {
+  background-color: var(--section-color-1);
+}
+
+.emails-table thead td {
+  font-weight: var(--weight-bold);
+}
+
+.updated-cell {
+  width: 120px;
+}
+
+.title-cell {
+  font-weight: var(--weight-bold);
+}
+
+.delete-cell,
+.edit-cell {
+  width: 80px;
+}
+
+.delete-confirm-cell {
+  background-color: var(--section-color-3);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.delete-confirm-cell .delete-confirm-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-confirm-buttons {
+  display: flex;
+}
+
+.delete-confirm-buttons .cancel-button {
+  margin-left: 10px;
+}
+
+.email-cell .button,
+.delete-confirm-cell  .delete-confirm-buttons .button {
+  padding: 5px 10px;
+  margin-top: 0;
+}
+
+.delete-confirm-cell  .delete-confirm-buttons .button {
+  height: 30px;
+}
+
+.button.write-email-button {
+  width: 240px;
+}
+
+.emails-table tbody tr.blank-row {
+  background-color: transparent;
+  height: 20px;
+}

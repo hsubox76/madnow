@@ -3,7 +3,6 @@
 .state-dropdown {
   width: 280px;
   box-sizing: border-box;
-  border: 1px solid var(--color-2-light);
   position: relative;
   display: flex;
   align-items: center;
@@ -14,9 +13,10 @@
 .options-container {
   width: 280px;
   position: absolute;
-  top: 35px;
+  top: 33px;
   left: 0;
   overflow: auto;
+  border: 1px solid var(--section-color-3);
 }
 
 .state-box {
@@ -35,7 +35,8 @@
 }
 
 .state-option-box {
-  background-color: var(--palette-5-transparent);
+  background-color: var(--neutral-light);
+  color: var(--dark-text);
 }
 
 .state-option-box:hover {

@@ -29,6 +29,7 @@
   --concrete:                  #95a5a6;
   --asbestos:                  #7f8c8d;
 
+/* Phaedra */
   /*--palette-1: rgb(255, 97, 56);
   --palette-2: rgb(255, 255, 225);
   --palette-3: rgb(190, 235, 159);
@@ -36,21 +37,66 @@
   --palette-5: rgb(0, 163, 136);
   --palette-5-transparent: rgba(0, 163, 136, 0.85);*/
 
+/* Sea Wolf */
+/*
+  --palette-1: RGB(220, 53, 34);
+  --palette-2: RGB(153, 143, 112);
+  --palette-3: RGB(55, 65, 64);
+  --palette-4: RGB(42, 44, 43);
+  --palette-5: RGB(30, 30, 32);*/
+
+
   --palette-1: #4CD4B0;
   --palette-2: #FFFCE6;
   --palette-3: #EDD834;
   --palette-4: #F24D16;
   --palette-5: #7D1424;
   --palette-5-transparent: rgba(125, 20, 36, 0.85);
+  --palette-5-bright: #a20019;
+  --palette-5-muted: #96565f;
+  --palette-1-darker: #479c86;
+  --palette-1-darkest: #1d7961;
+  --palette-1-muted: #5a7e75;
 
-  --palette-3: #e69082;
-  --palette-4: #d24d61;
+  --palette-3: rgb(239, 212, 212);
+  --palette-4: rgb(220, 156, 165);
 
+  --grey-1: #666;
+  --grey-2: #999;
+
+/* Firenze */
+/*
+  --palette-1: RGB(70, 137, 102);
+  --palette-2: RGB(255, 240, 165);
+  --palette-3: RGB(255, 176, 59);
+  --palette-4: RGB(182, 73, 38);
+  --palette-5: RGB(142, 40, 0);*/
+  
+
+  --palette-1: #32a1cc;
+  --palette-2: #effcff;
+  --palette-3: #b54b4b;
+  --palette-4: #8c1c1c;
+  --palette-5: #17334a;
+  
   --nav-color: var(--palette-1);
   --banner-color: var(--palette-2);
   --section-color-1: var(--palette-3);
   --section-color-2: var(--palette-4);
   --section-color-3: var(--palette-5);
+  --warning-color: rgb(189, 101, 20);
+  --success-color: #00919a;
+  --default-button-color: var(--palette-5);
+  --default-button-highlight-color: var(--palette-5-bright);
+  --default-button-disabled-color: var(--palette-5-muted);
+  --success-button-color: #006a82;
+  --success-button-highlight-color: #00aaa1;
+  --success-button-disabled-color: #467c88;
+  --danger-button-color: #860000;
+  --danger-button-highlight-color: #b90a0a;
+  --danger-button-disabled-color: #6f3333;
+  --cancel-button-color: var(--grey-1);
+  --cancel-button-highlight-color: var(--grey-2);
 
   --color-1-dark: var(--palette-5);
   --color-1-light: var(--wet-asphalt);
@@ -63,7 +109,7 @@
   --white-text: #fff;
   --dark-text: #124;
   --link-color: var(--palette-5);
-  --link-hover-color: var(--palette-4);
+  --link-hover-color: var(--palette-5-bright);
 
   --weight-bold: 400;
   --weight-normal: 300;
